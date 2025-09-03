@@ -143,3 +143,73 @@ body, html {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* GLOBAL CONTAINER */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* NAVBAR RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 12px;
+    gap: 12px;
+  }
+  .navRight {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* HERO RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    height: 280px;
+  }
+  .heroBrand {
+    font-size: 32px;
+  }
+  .heroTag {
+    font-size: 16px;
+    padding: 0 8px;
+  }
+  .searchBar {
+    flex-direction: column;
+    border-radius: 12px;
+  }
+  .searchInput {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+  .searchBtn {
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+  }
+}
+
+/* GRID RESPONSIVE */
+@media (max-width: 600px) {
+  .grid3, .grid4, .cityGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FOOTER RESPONSIVE */
+@media (max-width: 768px) {
+  .footerTop {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footerCols {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .footerCols {
+    grid-template-columns: 1fr;
+  }
+}

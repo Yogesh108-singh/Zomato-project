@@ -13,8 +13,8 @@ export default function Zomato() {
 
     const cities = [
         "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Ahmedabad",
-        "Chennai", "Kolkata", "Pune", "Jaipur", "Chandigarh",
-        "Lucknow", "Indore", "Surat", "Bhopal", "Nagpur",
+        "Chennai", "Kolkata", "Pune", "Jaipur", "Chandigarh", 
+        "Lucknow", "Indore", "Surat", "Bhopal", "Nagpur"
     ];
 
     const optionCards = [

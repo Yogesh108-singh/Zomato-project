@@ -10,6 +10,7 @@ export default function Zomato() {
     const [email, setEmail] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
     const [cart, setCart] = useState([]);
+  
 
     const cities = [
         "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Ahmedabad",
@@ -78,6 +79,7 @@ export default function Zomato() {
     };
 
     return (
+        
         <div className="page">
             {/* NAVBAR */}
             <nav className="nav">

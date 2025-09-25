@@ -12,9 +12,9 @@ export default function OrderPage({ cart, setCart }) {
 
   const handleCheckout = () => {
     if (cart.length === 0) return alert("Cart is empty");
-    alert(`Checkout — Total: ₹${total}`);
+    alert(`Swiggy Checkout — Total: ₹${total}`);
     setCart([]);
-    navigate("/"); // redirect to home
+    navigate("/swiggy"); // ✅ redirect to Swiggy homepage
   };
 
   return (
@@ -25,19 +25,55 @@ export default function OrderPage({ cart, setCart }) {
       ) : (
         <div>
           {cart.map((item, idx) => (
-            <div key={idx} style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid #eee" }}>
+            <div
+              key={idx}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                padding: "8px 0",
+                borderBottom: "1px solid #eee",
+              }}
+            >
               <div>
                 <div style={{ fontWeight: 700 }}>{item.name}</div>
                 <div style={{ color: "#666" }}>₹{item.price}</div>
               </div>
-              <button style={{ color: "#e23744", background: "none", border: "none", cursor: "pointer" }} onClick={() => removeFromCart(idx)}>Remove</button>
+              <button
+                style={{
+                  color: "#e23744",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+                onClick={() => removeFromCart(idx)}
+              >
+                Remove
+              </button>
             </div>
           ))}
-          <div style={{ display: "flex", justifyContent: "space-between", marginTop: 12, fontWeight: 700 }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: 12,
+              fontWeight: 700,
+            }}
+          >
             <div>Total</div>
             <div>₹{total}</div>
           </div>
-          <button style={{ marginTop: 12, padding: "10px 16px", borderRadius: 8, background: "#e23744", color: "#fff", border: "none", cursor: "pointer" }} onClick={handleCheckout}>
+          <button
+            style={{
+              marginTop: 12,
+              padding: "10px 16px",
+              borderRadius: 8,
+              background: "#e23744",
+              color: "#fff",
+              border: "none",
+              cursor: "pointer",
+            }}
+            onClick={handleCheckout}
+          >
             Checkout
           </button>
         </div>

@@ -2,15 +2,11 @@ import React, { useState } from "react";
 import "./App.css";
 import { useNavigate } from "react-router-dom";
 
-
-
-
-export default function Zomato() {
+export default function Swiggy() {
     const [search, setSearch] = useState("");
     const [email, setEmail] = useState("");
     const [loggedIn, setLoggedIn] = useState(false);
     const [cart, setCart] = useState([]);
-  
 
     const cities = [
         "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Ahmedabad",
@@ -37,11 +33,11 @@ export default function Zomato() {
     ];
 
     const collections = [
-  { title: "Trending This Week", count: 30, img: "/images/20.jpg" },
-  { title: "Best of India", count: 50, img: "/images/30.jpg" },
-  { title: "Newly Opened Spots", count: 25, img: "/images/40.jpg" },
-  { title: "Great Cafés", count: 40, img: "/images/50.jpg" },
-];
+        { title: "Trending This Week", count: 30, img: "/images/20.jpg" },
+        { title: "Best of India", count: 50, img: "/images/30.jpg" },
+        { title: "Newly Opened Spots", count: 25, img: "/images/40.jpg" },
+        { title: "Great Cafés", count: 40, img: "/images/50.jpg" },
+    ];
 
     const menuData = [
         { id: 1, name: "Pizza Margherita", price: 250, img: "/images/Pizza Margherita.jpg" },
@@ -79,12 +75,11 @@ export default function Zomato() {
     };
 
     return (
-        
         <div className="page">
             {/* NAVBAR */}
             <nav className="nav">
                 <div className="navLeft">
-                    <div className="logo">zomato</div>
+                    <div className="logo">swiggy</div>
                     <div className="navCity">India</div>
                 </div>
                 <div className="navRight">
@@ -96,7 +91,6 @@ export default function Zomato() {
                             <button className="navBtn" onClick={handleTakeOrder}>
                                 🛒 Take Order ({cart.length})
                             </button>
-
                             <button className="navBtn checkoutBtn" onClick={handleCheckout}>Checkout ₹{total}</button>
                         </>
                     )}
@@ -107,7 +101,7 @@ export default function Zomato() {
             <header className="hero">
                 <div className="heroOverlay" />
                 <div className="heroContent">
-                    <div className="heroBrand">zomato</div>
+                    <div className="heroBrand">swiggy</div>
                     <h2 className="heroTag">Discover the best food & drinks in India</h2>
                     <form onSubmit={handleFakeSubmit} className="searchBar">
                         <span className="searchIcon">🔍</span>
@@ -167,12 +161,10 @@ export default function Zomato() {
                 <div className="grid4">
                     {collections.map((col, index) => (
                         <div key={col.title} className="collectionCard">
-                            {/* Assign different background div based on index */}
                             {index === 0 && <div className="collectionImg1" />}
                             {index === 1 && <div className="collectionImg2" />}
                             {index === 2 && <div className="collectionImg3" />}
                             {index === 3 && <div className="collectionImg4" />}
-
                             <div className="collectionText">
                                 <span>{col.title}</span>
                                 <span className="collectionCount">{col.count} Places →</span>
@@ -181,7 +173,6 @@ export default function Zomato() {
                     ))}
                 </div>
             </section>
-
 
             {/* CITIES */}
             <section className="section">
@@ -195,7 +186,7 @@ export default function Zomato() {
             <section className="section appSection">
                 <div className="appInner">
                     <div>
-                        <h2 className="h2">Get the Zomato app</h2>
+                        <h2 className="h2">Get the Swiggy app</h2>
                         <p className="subtle">We will send you a link, open it on your phone to download the app</p>
                         <form onSubmit={handleAppLink} className="appForm">
                             <input
@@ -248,7 +239,7 @@ export default function Zomato() {
             {/* FOOTER */}
             <footer className="footer">
                 <div className="footerTop">
-                    <div className="logo">zomato</div>
+                    <div className="logo">swiggy</div>
                     <div>
                         <select className="select" defaultValue="India">
                             <option>India</option>
@@ -263,8 +254,8 @@ export default function Zomato() {
                 </div>
                 <div className="footerCols">
                     {[
-                        { head: "About Zomato", items: ["Who We Are", "Blog", "Work With Us", "Investor Relations"] },
-                        { head: "Zomaverse", items: ["Zomato", "Blinkit", "Feeding India", "Hyperpure"] },
+                        { head: "About Swiggy", items: ["Who We Are", "Blog", "Work With Us", "Investor Relations"] },
+                        { head: "Swiggy Services", items: ["Swiggy", "Instamart", "Feeding India", "Hyperpure"] },
                         { head: "For Restaurants", items: ["Partner With Us", "Apps For You"] },
                         { head: "Learn More", items: ["Privacy", "Security", "Terms", "Sitemap"] },
                     ].map((col) => (
@@ -276,7 +267,7 @@ export default function Zomato() {
                         </div>
                     ))}
                 </div>
-                <div className="copy">© {new Date().getFullYear()} Demo Zomato Clone — UI only</div>
+                <div className="copy">© {new Date().getFullYear()} Demo Swiggy Clone — UI only</div>
             </footer>
         </div>
     );

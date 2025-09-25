@@ -11,7 +11,7 @@ export default function Signup() {
   function handleSignup(e) {
     e.preventDefault();
     signup(email); // set user
-    navigate("/"); // redirect to Zomato page
+    navigate("/swiggy"); // redirect to Swiggy page
   }
 
   return (
